@@ -1,28 +1,27 @@
 /*
  * Classname - Currency
  * Version info - 1.0
+ * Date - 20.08.22
  * Copyright notice - © 2022 Alex Kotenko
  */
-package com.solution.kotenko;
+package com.solution.kotenko.currency;
 
 /**
  * Represents currency
+ * <p>
+ * r030 - currency code (internal bank code)
+ * txt - currency name UKR Local
+ * rate - currency rate
+ * cc - currency abbreviation
+ * exchangedate - currency exchange date UKR Local and Zone
  */
+@SuppressWarnings("SpellCheckingInspection")
 public class Currency {
 
-    //currency code (internal bank code)
     private String r030;
-
-    //currency name UKR Local
     private String txt;
-
-    //currency rate
     private String rate;
-
-    //currency abbreviation
     private String cc;
-
-    //currency exchange date UKR Local and Zone
     private String exchangedate;
 
     public Currency() {
@@ -33,103 +32,51 @@ public class Currency {
         this.cc = cc;
     }
 
-    /**
-     * Represents useful information
-     *
-     * @return Currency code + currency rate
-     */
-    @Override
-    public String toString() {
-        return "Currency code: " + cc + " " + ", currency rate: " + rate;
-    }
-
-    /**
-     * Getter
-     *
-     * @return r030
-     */
+    @SuppressWarnings("unused")
     public String getR030() {
         return r030;
     }
 
-    /**
-     * Setter
-     *
-     * @param r030 takes value
-     */
     public void setR030(String r030) {
         this.r030 = r030;
     }
 
-    /**
-     * Getter
-     *
-     * @return txt
-     */
+    @SuppressWarnings("unused")
     public String getTxt() {
         return txt;
     }
 
-    /**
-     * Setter
-     *
-     * @param txt takes value
-     */
     public void setTxt(String txt) {
         this.txt = txt;
     }
 
-    /**
-     * Getter
-     *
-     * @return rate
-     */
     public String getRate() {
         return rate;
     }
 
-    /**
-     * Setter
-     *
-     * @param rate takes value
-     */
     public void setRate(String rate) {
         this.rate = rate;
     }
 
-    /**
-     * Getter
-     *
-     * @return cc
-     */
     public String getCc() {
         return cc;
     }
 
-    /**
-     * Setter
-     *
-     * @param cc takes value
-     */
     public void setCc(String cc) {
         this.cc = cc;
     }
 
-    /**
-     * Getter
-     *
-     * @return exchangedate
-     */
+    @SuppressWarnings("unused")
     public String getExchangedate() {
         return exchangedate;
     }
 
-    /**
-     * Setter
-     *
-     * @param exchangedate takes value
-     */
     public void setExchangedate(String exchangedate) {
         this.exchangedate = exchangedate;
+    }
+
+    @Override
+    public String toString() {
+        return "Currency code: " + cc + " " + ", currency rate: " + rate;
     }
 }

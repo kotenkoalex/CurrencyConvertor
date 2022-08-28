@@ -1,9 +1,10 @@
 /*
  * Classname - CurrencyConvertor
  * Version info - 1.0
+ * Date - 20.08.22
  * Copyright notice - © 2022 Alex Kotenko
  */
-package com.solution.kotenko;
+package com.solution.kotenko.currency;
 
 /**
  * Represents utils for currency converting

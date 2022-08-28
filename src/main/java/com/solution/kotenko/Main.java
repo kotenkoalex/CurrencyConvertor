@@ -1,30 +1,31 @@
 /*
  * Classname - Main
  * Version info - 1.0
+ * Date - 20.08.22
  * Copyright notice - © 2022 Alex Kotenko
  */
 package com.solution.kotenko;
 
-import java.net.HttpURLConnection;
-import java.util.ArrayList;
+import com.solution.kotenko.currency.CurrencyOutput;
+import com.solution.kotenko.program.Input;
+import com.solution.kotenko.program.Output;
+import com.solution.kotenko.program.ProgramLogic;
 
 public class Main {
 
     public static void main(String[] args) {
+        ProgramLogic programLogic = new ProgramLogic();
+        programLogic.createCurrenciesListFromAPI();
+        programLogic.createFileOnCurrentDate();
 
-        //connect to API bank.gov.ua
-        CurrencyAPIConnection currencyAPIConnection = new CurrencyAPIConnection();
-        HttpURLConnection httpURLConnection = currencyAPIConnection.getHttpRequest();
+        CurrencyOutput.printAllCurrencyRates(
+                programLogic.getPathTodayFile(), programLogic.getCurrenciesList());
+        Input input = new Input();
+        input.start(programLogic);
+        int period = input.inputPeriod();
+        String currencyCode = input.inputCurrencyCode();
 
-        //save data from API to String ArrayList
-        ArrayList<String> data = currencyAPIConnection.readDataFromApiToArrayList(httpURLConnection);
-
-        //convert data from ArrayList to Currency list using JSON parsing
-        CurrencyJSONParser currencyJSONParser = new CurrencyJSONParser();
-        ArrayList<Currency> currencies = currencyJSONParser.parse(data);
-
-        //print result to file
-        String path = "src/main/resources/output.txt";
-        CurrencyOutput.printAllCurrenciesToFile(path, currencies, 100);
+        Output output = new Output();
+        output.showResult(period, currencyCode);
     }
 }

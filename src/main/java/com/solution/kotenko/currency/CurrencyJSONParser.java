@@ -1,9 +1,10 @@
 /*
  * Classname - CurrencyJSONParser
  * Version info - 1.0
+ * Date - 20.08.22
  * Copyright notice - © 2022 Alex Kotenko
  */
-package com.solution.kotenko;
+package com.solution.kotenko.currency;
 
 import org.json.simple.JSONObject;
 import org.json.simple.parser.JSONParser;
@@ -22,6 +23,7 @@ public class CurrencyJSONParser {
      * @param data takes ArrayList with currencies JSON in String format
      * @return ArrayList<Currency>
      */
+    @SuppressWarnings("SpellCheckingInspection")
     public ArrayList<Currency> parse(ArrayList<String> data) {
         ArrayList<Currency> currencies = new ArrayList<>();
         JSONParser parser = new JSONParser();

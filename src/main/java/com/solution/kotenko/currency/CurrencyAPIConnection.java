@@ -1,10 +1,12 @@
 /*
  * Classname - CurrencyAPIConnection
  * Version info - 1.0
+ * Date - 20.08.22
  * Copyright notice - © 2022 Alex Kotenko
  */
-package com.solution.kotenko;
+package com.solution.kotenko.currency;
 
+import com.solution.kotenko.program.ProgramConstants;
 import org.apache.log4j.Logger;
 
 import java.io.BufferedReader;
@@ -12,7 +14,6 @@ import java.io.IOException;
 import java.io.InputStreamReader;
 import java.net.HttpURLConnection;
 import java.net.MalformedURLException;
-import java.net.ProtocolException;
 import java.net.URL;
 import java.util.ArrayList;
 import java.util.StringTokenizer;
@@ -20,7 +21,7 @@ import java.util.StringTokenizer;
 /**
  * Represents utils to work with bank API
  */
-public class CurrencyAPIConnection {
+public class CurrencyAPIConnection implements ProgramConstants {
 
     private final Logger LOGGER = Logger.getLogger(CurrencyAPIConnection.class);
 
@@ -30,44 +31,17 @@ public class CurrencyAPIConnection {
      * @return http URL connection
      */
     public HttpURLConnection getHttpRequest() {
-        String apiURL = "https://bank.gov.ua/NBUStatService/v1/statdirectory/exchange?json";
-
-        //create URL
-        URL url = null;
         try {
-            url = new URL(apiURL);
+            URL url = new URL(API_URL);
+            HttpURLConnection httpURLConnection = (HttpURLConnection) url.openConnection();
+            httpURLConnection.setRequestMethod("GET");
+            if (httpURLConnection.getResponseCode() == HttpURLConnection.HTTP_OK) {
+                return httpURLConnection;
+            }
         } catch (MalformedURLException e) {
             LOGGER.info(e.getMessage());
-        }
-
-        //create HttpURLConnection
-        HttpURLConnection httpURLConnection = null;
-        try {
-            if (url != null) {
-                httpURLConnection = (HttpURLConnection) url.openConnection();
-            }
         } catch (IOException e) {
-            LOGGER.info(e.getMessage());
-        }
-
-        //setRequest
-        try {
-            if (httpURLConnection != null) {
-                httpURLConnection.setRequestMethod("GET");
-            }
-        } catch (ProtocolException e) {
-            LOGGER.info(e.getMessage());
-        }
-
-        //get connection
-        try {
-            if (httpURLConnection != null) {
-                if (httpURLConnection.getResponseCode() == HttpURLConnection.HTTP_OK) {
-                    return httpURLConnection;
-                }
-            }
-        } catch (IOException e) {
-            LOGGER.info(e.getMessage());
+            e.printStackTrace();
         }
         return null;
     }
@@ -115,4 +89,5 @@ public class CurrencyAPIConnection {
 
         return data;
     }
+
 }
