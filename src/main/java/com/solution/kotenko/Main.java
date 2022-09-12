@@ -11,6 +11,9 @@ import com.solution.kotenko.program.Input;
 import com.solution.kotenko.program.Output;
 import com.solution.kotenko.program.ProgramLogic;
 
+/**
+ * Class provides major logic
+ */
 public class Main {
 
     public static void main(String[] args) {

@@ -1,5 +1,76 @@
 
-2022-09-04
+_____________________________________________
+2022-09-12
+Created ProgramLogic object
+Created currencies list from API
+Created file on current date
+Print all currency rates in today's file
+Print all currency rates in today's file
+Print all currency rates in today's file
+Print all currency rates in today's file
+Print all currency rates in today's file
+Print all currency rates in today's file
+Print all currency rates in today's file
+Print all currency rates in today's file
+Print all currency rates in today's file
+Print all currency rates in today's file
+Print all currency rates in today's file
+Print all currency rates in today's file
+Print all currency rates in today's file
+Print all currency rates in today's file
+Print all currency rates in today's file
+Print all currency rates in today's file
+Print all currency rates in today's file
+Print all currency rates in today's file
+Print all currency rates in today's file
+Print all currency rates in today's file
+Print all currency rates in today's file
+Print all currency rates in today's file
+Print all currency rates in today's file
+Print all currency rates in today's file
+Print all currency rates in today's file
+Print all currency rates in today's file
+Print all currency rates in today's file
+Print all currency rates in today's file
+Print all currency rates in today's file
+Print all currency rates in today's file
+Print all currency rates in today's file
+Print all currency rates in today's file
+Print all currency rates in today's file
+Print all currency rates in today's file
+Print all currency rates in today's file
+Print all currency rates in today's file
+Print all currency rates in today's file
+Print all currency rates in today's file
+Print all currency rates in today's file
+Print all currency rates in today's file
+Print all currency rates in today's file
+Print all currency rates in today's file
+Print all currency rates in today's file
+Print all currency rates in today's file
+Print all currency rates in today's file
+Print all currency rates in today's file
+Print all currency rates in today's file
+Print all currency rates in today's file
+Print all currency rates in today's file
+Print all currency rates in today's file
+Print all currency rates in today's file
+Print all currency rates in today's file
+Print all currency rates in today's file
+Print all currency rates in today's file
+Print all currency rates in today's file
+Print all currency rates in today's file
+Print all currency rates in today's file
+Print all currency rates in today's file
+Print all currency rates in today's file
+Print all currency rates in today's file
+Print all currency rates in today's file
+Print all currency rates in today's file
+Created Input object
+Lunched user interface (start method)
+Got data from console (inputPeriod method)
+_____________________________________________
+2022-09-12
 Created ProgramLogic object
 Created currencies list from API
 Created file on current date
@@ -10,11 +81,3 @@ Got data from console (inputCurrencyCode method)
 Created Output object
 Printed result in console (showResult method)
 _____________________________________________
-
-2022-09-04
-Created ProgramLogic object
-Created currencies list from API
-Created file on current date
-Created Input object
-Lunched user interface (start method)
-Got data from console (inputPeriod method)

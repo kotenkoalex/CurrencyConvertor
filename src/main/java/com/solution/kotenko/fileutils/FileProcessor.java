@@ -149,7 +149,7 @@ public class FileProcessor {
             currencySimples = filesReaderData.get(key);
             for (CurrencySimple element : currencySimples) {
                 if (element.getCurrencyCode().equals(currencyCode)) {
-                    changes.add(element.getCurrencyRate());
+                    changes.add(key + ":" + element.getCurrencyRate());
                 }
             }
         }
